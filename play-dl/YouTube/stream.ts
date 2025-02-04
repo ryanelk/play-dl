@@ -63,13 +63,14 @@ export async function stream_from_info(
     info: InfoData | StreamInfoData,
     options: StreamOptions = {}
 ): Promise<YouTubeStream> {
-    if (info.format.length === 0)
+    if (info.format?.length === 0)
         throw new Error('Upcoming and premiere videos that are not currently live cannot be streamed.');
     if (options.quality && !Number.isInteger(options.quality))
         throw new Error("Quality must be set to an integer.")
 
     const final: any[] = [];
     if (
+        info.format &&
         info.LiveStreamData.isLive === true &&
         info.LiveStreamData.dashManifestUrl !== null &&
         info.video_details.durationInSec === 0
