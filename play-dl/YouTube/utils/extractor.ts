@@ -489,7 +489,7 @@ export async function decipher_info<T extends InfoData | StreamInfoData>(
         data.video_details.durationInSec === 0
     ) {
         return data;
-    } else if (data.format.length > 0 && (data.format[0].signatureCipher || data.format[0].cipher)) {
+    } else if (data.format && data.format.length > 0 && (data.format[0].signatureCipher || data.format[0].cipher)) {
         if (audio_only) data.format = parseAudioFormats(data.format);
         data.format = await format_decipher(data.format, data.html5player);
         return data;
