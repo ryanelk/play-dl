@@ -18,7 +18,7 @@ interface PlaylistOptions {
 
 const video_id_pattern = /^[a-zA-Z\d_-]{11,12}$/;
 const playlist_id_pattern = /^(PL|UU|LL|RD|OL)[a-zA-Z\d_-]{10,}$/;
-const DEFAULT_API_KEY = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
+const DEFAULT_API_KEY = 'AIzaSyD2oKUV-wwkNyEQIPjBkh0MVE_uO8UaIbI';
 const video_pattern =
     /^((?:https?:)?\/\/)?(?:(?:www|m|music)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|shorts\/|embed\/|live\/|v\/)?)([\w\-]+)(\S+)?$/;
 const playlist_pattern =
